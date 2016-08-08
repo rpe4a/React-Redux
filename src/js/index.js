@@ -11,7 +11,6 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'*/
 import App from './components/app'
 
-const 
 
 render(
     <App />, document.getElementById('app')
