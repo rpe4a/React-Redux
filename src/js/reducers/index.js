@@ -1,6 +1,6 @@
 const initialState = {
-  name: 'Михаил',
-  surname: 'Плюснин',
+  name: 'Man',
+  surname: 'BAT',
   age: 25
 };
 
