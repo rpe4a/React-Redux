@@ -5,7 +5,7 @@ import rootReducer from '../reducers'
 export default (initialState) => {
     /*const logger = createLogger()*/
 
-
+    //instal redux DevTools
     const finalCreateStore = compose(
         applyMiddleware( /*logger*/ ),
         window.devToolsExtension ? window.devToolsExtension() : f => f
