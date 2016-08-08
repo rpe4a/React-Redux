@@ -7,14 +7,15 @@ require('css/_site.scss');
 import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
-/*import { createStore } from 'redux'
-import { Provider } from 'react-redux'*/
+import { Provider } from 'react-redux'
 import App from './components/app'
-import {createStore} from 'redux'
+import configureStore from './store/configureStore'
 
-const store = createStore( () => {}, {})
+const store = configureStore();
 
 
 render(
-    <App />, document.getElementById('app')
+    <Provider store={store}>
+        <App/>
+    </Provider>, document.getElementById('app')
 )
