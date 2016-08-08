@@ -88,6 +88,6 @@ module.exports = {
     postcss: function () {
         return [autoprefixer({
             browsers: ['last 2 versions', '> 1%']
-        })];
+        }), precss];
     },
 }
