@@ -10,8 +10,9 @@ import { render } from 'react-dom'
 /*import { createStore } from 'redux'
 import { Provider } from 'react-redux'*/
 import App from './components/app'
+//import {createStore} from 'redux'
 
-const store = createStore( () => {}, {})
+//const store = createStore( () => {}, {})
 
 
 render(
