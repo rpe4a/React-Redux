@@ -9,13 +9,13 @@ class Page extends Component {
     }
     
     onYearBtnClick(e){
-        this.props.setYear(+e.target.textContent)
+        this.props.getPhotos(+e.target.textContent)
     }
 
 
     render () {  
  
-        const { year, photos} = this.props;
+        const { year, photos, fetching } = this.props;
 
         let years = [2016,2015,2014,2013,2012,2011].map((value, index) => {
              return <button className={
@@ -33,7 +33,7 @@ class Page extends Component {
                 <div className='btn-group'>
                     {years}
                 </div>
-                <h3>{year} год</h3>
+                <h3>{(fetching) ? 'Загрузка...' : `${year} год` }  </h3>
                 <p>У тебя {photos.length} фото.</p>
             </div>
         )
@@ -43,7 +43,8 @@ class Page extends Component {
 Page.propTypes = {
     year: PropTypes.number.isRequired,
     photos: PropTypes.array.isRequired,
-    setYear: PropTypes.func.isRequired
+    fetching: PropTypes.bool.isRequired,
+    getPhotos: PropTypes.func.isRequired
 }
 
 export default Page

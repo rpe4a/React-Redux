@@ -14,7 +14,11 @@ class App extends Component {
         return (
             <div className='container-fluid'>
                 <User name={user.name}/>
-                <Page year={page.year} photos={page.photos} setYear={pageActions.setYear} />
+                <Page year={page.year}
+                      photos={page.photos} 
+                      fetching={page.fetching}
+                      getPhotos={pageActions.getPhotos}   
+                                         />
             </div>
         );
     }
