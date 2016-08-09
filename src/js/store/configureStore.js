@@ -5,21 +5,21 @@ import rootReducer from '../reducers'
 export default (initialState) => {
     /*const logger = createLogger()*/
 
-    //instal redux DevTools
-    const finalCreateStore = compose(
-        applyMiddleware( /*logger*/ ),
+    
+    /*const finalCreateStore = compose(
+        applyMiddleware( logger ),
         window.devToolsExtension ? window.devToolsExtension() : f => f
-    )(createStore);
+    )(createStore);*/
 
-    const store = finalCreateStore(
+    /*const store = finalCreateStore(
         rootReducer, //root reducer
         initialState, //default state
-    );
+    );*/
 
-    /*const store = createStore(rootReducer, initialState, compose(
-        applyMiddleware(logger),
+    const store = createStore(rootReducer, initialState, compose(
+        applyMiddleware(), 
         window.devToolsExtension ? window.devToolsExtension() : f => f
-    ));*/
+    ));
 
     if (module.hot) {
         module.hot.accept('../reducers', () => {
